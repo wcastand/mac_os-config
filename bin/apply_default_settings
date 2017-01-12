@@ -84,16 +84,13 @@ printf "Finder - Display full POSIX path as window title\n"
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 printf "Finder - Use list view in all Finder windows\n"
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 printf "Finder - Allow quitting via COMMAND+Q -- Doing so will also hide desktop icons\n"
 defaults write com.apple.finder QuitMenuItem -bool true
 
 printf "Finder - Allow text selection in Quick Look\n"
 defaults write com.apple.finder QLEnableTextSelection -bool true
-
-printf "iOS Simulator - Symlink the iOS Simulator application\n"
-sudo ln -sf "/Applications/Xcode.app/Contents/Applications/iPhone Simulator.app" "/Applications/iOS Simulator.app"
 
 printf "Safari - Set home page to 'about:blank' for faster loading\n"
 defaults write com.apple.Safari HomePage -string "about:blank"
